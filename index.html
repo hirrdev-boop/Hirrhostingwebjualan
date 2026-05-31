@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>THOHIR Store Infinity | Solusi Digital Terpercaya</title>
+  <!-- Font Awesome 6 (gratis) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Poppins & Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefefe;
+      color: #1f2937;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4, .logo, .nav-links a {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* navbar mobile friendly */
+    .navbar {
+      background: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(2px);
+      background: rgba(255,255,255,0.96);
+    }
+    .nav-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+    .logo a {
+      font-size: 1.6rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #6C63FF, #3F3D9E);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-decoration: none;
+    }
+    .logo span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      background: none;
+      color: #4b5563;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #374151;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      color: #6C63FF;
+    }
+    .menu-icon {
+      display: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    /* hero section */
+    .hero {
+      padding: 48px 0 32px;
+      background: linear-gradient(145deg, #ffffff 0%, #f5f3ff 100%);
+      border-radius: 0 0 2rem 2rem;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .hero-badge {
+      background: #e0e7ff;
+      color: #4338ca;
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+      width: fit-content;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .hero h1 .highlight {
+      background: linear-gradient(120deg, #6C63FF, #a78bfa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .rating-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      background: white;
+      padding: 12px 20px;
+      border-radius: 80px;
+      width: fit-content;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      border: 1px solid #eef2ff;
+    }
+    .stars {
+      color: #fbbf24;
+      letter-spacing: 2px;
+    }
+    .rating-number {
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+    .free-badge {
+      background: #10b98120;
+      color: #059669;
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* section title */
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: #6C63FF;
+      border-radius: 4px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      margin: 40px 0;
+    }
+    .service-card {
+      background: white;
+      border-radius: 28px;
+      padding: 24px 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+      transition: 0.25s ease;
+      border: 1px solid #f0f0ff;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 35px -12px rgba(108,99,255,0.2);
+      border-color: #cdc9ff;
+    }
+    .service-icon {
+      font-size: 2.5rem;
+      color: #6C63FF;
+      margin-bottom: 18px;
+    }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+    .service-list {
+      list-style: none;
+      margin-top: 12px;
+    }
+    .service-list li {
+      margin: 12px 0;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .service-list i {
+      color: #6C63FF;
+      width: 20px;
+    }
+
+    .joki-section {
+      background: #faf9ff;
+      border-radius: 32px;
+      padding: 32px 28px;
+      margin: 40px 0;
+    }
+    .flex-two {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+    .why-card {
+      background: white;
+      border-radius: 24px;
+      padding: 24px;
+      text-align: center;
+      flex: 1;
+      min-width: 180px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid #eef2ff;
+    }
+
+    /* testimonial */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin: 32px 0;
+    }
+    .testi-card {
+      background: white;
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.03);
+      border: 1px solid #ececff;
+    }
+    .testi-stars {
+      color: #fbbf24;
+      margin: 10px 0;
+    }
+    .testi-text {
+      font-style: italic;
+      margin: 16px 0;
+      color: #2d3a4b;
+    }
+    .customer-name {
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    /* FAQ accordion */
+    .faq-item {
+      background: white;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      border: 1px solid #e4e4f0;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 20px 24px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      background: white;
+    }
+    .faq-answer {
+      padding: 0 24px 20px 24px;
+      color: #4b5563;
+      display: none;
+      border-top: 1px solid #f0f0fa;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* contact & form */
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin: 40px 0;
+      background: white;
+      border-radius: 32px;
+      padding: 32px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.03);
+    }
+    .contact-info {
+      flex: 1;
+    }
+    .contact-form {
+      flex: 1;
+    }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .social-icons a {
+      background: #f0f0ff;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      color: #1f2937;
+      margin-right: 12px;
+      margin-top: 12px;
+      transition: 0.2s;
+    }
+    .social-icons a:hover {
+      background: #6C63FF;
+      color: white;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 14px 18px;
+      margin: 12px 0;
+      border-radius: 24px;
+      border: 1px solid #d1d5db;
+      font-family: inherit;
+      transition: 0.2s;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #6C63FF;
+      box-shadow: 0 0 0 3px #6c63ff20;
+    }
+    .btn-primary {
+      background: #6C63FF;
+      color: white;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-primary:hover {
+      background: #564fd1;
+      transform: scale(0.98);
+    }
+    footer {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 40px 0 24px;
+      margin-top: 60px;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.85rem;
+      border-top: 1px solid #1f2937;
+      padding-top: 24px;
+    }
+    @media (max-width: 780px) {
+      .nav-links {
+        display: none;
+      }
+      .menu-icon {
+        display: block;
+      }
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .container {
+        padding: 0 20px;
+      }
+      .contact-wrapper {
+        padding: 24px;
+      }
+    }
+    button {
+      background: none;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-flex">
+    <div class="logo">
+      <a href="#">THOHIR<span> INFITNY</span></a>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Beranda</a>
+      <a href="#services">Layanan</a>
+      <a href="#testimonials">Testimoni</a>
+      <a href="#contact">Kontak</a>
+    </div>
+    <div class="menu-icon" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge"><i class="fas fa-code"></i> Digital Creator</div>
+      <h1>Hello my name is <span class="highlight">THOHIR INFITNY</span><br>Fullstack & Bot Specialist</h1>
+      <div class="rating-card">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+        <span class="rating-number">4.9</span>
+        <span>(1,234 Reviews)</span>
+        <span class="free-badge">Free Fee Admin</span>
+      </div>
+      <p style="max-width: 600px; color: #4b5563;">Solusi digital lengkap: Panel Pterodactyl, Bot WhatsApp, Desain Kreatif, dan Produk Digital premium.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Layanan Unggulan Grid 4 Kategori -->
+    <div id="services">
+      <div class="grid-4">
+        <!-- Hosting & Bot -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-server"></i></div>
+          <h3>Hosting & Kebutuhan Bot</h3>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle"></i> Panel Pterodactyl</li>
+            <li><i class="fas fa-check-circle"></i> Jasa Pembuatan Fitur</li>
+            <li><i class="fas fa-check-circle"></i> Sewa Bot & Jadibot</li>
+            <li><i class="fas fa-check-circle"></i> Sell Script Lily Gen 2</li>
+            <li><i class="fas fa-check-circle"></i> Jasa Rename Script WA</li>
+            <li><i class="fas fa-check-circle"></i> Domain & Hosting 1 Thn</li>
+          </ul>
+        </div>
+        <!-- Jasa Script Bot WhatsApp -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fab fa-whatsapp"></i></div>
+          <h3>Jasa Script Bot WA</h3>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle"></i> Bot Multi Device</li>
+            <li><i class="fas fa-check-circle"></i> Bot RPG</li>
+            <li><i class="fas fa-check-circle"></i> Bot Jaga Group & Pushkontak</li>
+            <li><i class="fas fa-check-circle"></i> Bot Convert / Sticker</li>
+            <li><i class="fas fa-check-circle"></i> Bot Auto AI</li>
+            <li><i class="fas fa-check-circle"></i> Bot Auto Order + Payment Gateway</li>
+          </ul>
+        </div>
+        <!-- Creative Design -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
+          <h3>Creative Design</h3>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle"></i> Desain Logo Personal Brand</li>
+            <li><i class="fas fa-check-circle"></i> Desain Banner / Poster</li>
+            <li><i class="fas fa-check-circle"></i> UI/UX Design</li>
+            <li><i class="fas fa-check-circle"></i> Desain Kartu Nama</li>
+          </ul>
+        </div>
+        <!-- Produk Digital -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-digital-tiling"></i></div>
+          <h3>Produk Digital</h3>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle"></i> E-Book & Template</li>
+            <li><i class="fas fa-check-circle"></i> Software & Tools</li>
+            <li><i class="fas fa-check-circle"></i> Lisensi & Key</li>
+            <li><i class="fas fa-check-circle"></i> Akun Premium</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jasa Joki Tugas Sekolah -->
+    <div class="joki-section">
+      <h2 class="section-title" style="margin-bottom: 20px;">📚 Jasa Joki Tugas Sekolah</h2>
+      <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+        <div style="background: white; border-radius: 24px; padding: 20px 28px; flex:1"><i class="fas fa-file-alt" style="color:#6C63FF; font-size: 2rem;"></i><h3 style="margin: 12px 0">Makalah</h3><p>Penulisan riset & akademik original</p></div>
+        <div style="background: white; border-radius: 24px; padding: 20px 28px; flex:1"><i class="fas fa-briefcase" style="color:#6C63FF; font-size: 2rem;"></i><h3 style="margin: 12px 0">Laporan PKL</h3><p>Rapih, sistematis, bebas plagiasi</p></div>
+        <div style="background: white; border-radius: 24px; padding: 20px 28px; flex:1"><i class="fas fa-folder-open" style="color:#6C63FF; font-size: 2rem;"></i><h3 style="margin: 12px 0">Portfolio</h3><p>Desain profesional & kreatif</p></div>
+      </div>
+    </div>
+
+    <!-- Mengapa Memilih Kami (4 keunggulan) -->
+    <h2 class="section-title">✨ Mengapa Memilih Kami?</h2>
+    <div class="flex-two" style="margin-bottom: 48px;">
+      <div class="why-card"><i class="fas fa-rocket" style="font-size: 2rem; color:#6C63FF;"></i><h3>Pengiriman Cepat</h3><p>Pesanan diproses maksimal 1x24 jam</p></div>
+      <div class="why-card"><i class="fas fa-shield-alt" style="font-size: 2rem; color:#6C63FF;"></i><h3>Garansi Resmi</h3><p>Dukungan after sales terbaik</p></div>
+      <div class="why-card"><i class="fas fa-headset" style="font-size: 2rem; color:#6C63FF;"></i><h3>Dukungan 24/7</h3><p>CS siap bantu kapan saja</p></div>
+      <div class="why-card"><i class="fas fa-users" style="font-size: 2rem; color:#6C63FF;"></i><h3>Terpercaya</h3><p>8.200+ pelanggan puas</p></div>
+    </div>
+
+    <!-- Testimonial + Bintang 5 -->
+    <h2 class="section-title" id="testimonials">⭐ Testimonial Pelanggan</h2>
+    <div class="testimonial-grid">
+      <div class="testi-card">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-text">"Pelayanan sangat cepat dan ramah. Produk original dan harga bersaing. Recommended banget!"</p>
+        <p class="customer-name"><strong>Ahmad R.</strong> - Bandung</p>
+        <small>12 Juni 2023</small>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-text">"Sewa bot WhatsApp super responsif, fitur lengkap. Admin fast respon. Bintang 5!"</p>
+        <p class="customer-name"><strong>Siti N.</strong> - Surabaya</p>
+        <small>2 minggu lalu</small>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-text">"Desain UI/UX keren dan sesuai ekspektasi. Jasa rename script WA juga cepat. Top markotop!"</p>
+        <p class="customer-name"><strong>Rizki F.</strong> - Jakarta</p>
+        <small>5 Agustus 2024</small>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-text">"Pterodactyl panel stabil, hosting murah meriah. Layanan pelanggan 24/7 sangat membantu."</p>
+        <p class="customer-name"><strong>Dewi P.</strong> - Yogyakarta</p>
+        <small>19 Januari 2025</small>
+      </div>
+    </div>
+    <!-- Rating agregat langsung -->
+    <div style="background: #edeaff; border-radius: 48px; padding: 18px 24px; margin: 24px 0; text-align: center;">
+      <i class="fas fa-star" style="color:#fbbf24"></i> <strong>4.9 / 5.0</strong> dari <strong>1.234+ ulasan</strong> · Pelanggan puas dengan layanan THOHIR INFITNY
+    </div>
+
+    <!-- FAQ (Pertanyaan Umum) -->
+    <h2 class="section-title">❓ Pertanyaan Umum</h2>
+    <div class="faq" id="faq">
+      <div class="faq-item">
+        <div class="faq-question">Bagaimana cara melakukan pemesanan? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Cukup hubungi kami via WhatsApp, Telegram, atau isi form kontak. Kami akan merespon dalam 1x24 jam dan membantu proses pemesanan.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Berapa lama waktu pengiriman? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Pengerjaan script/desain 2-3 hari, untuk hosting & domain langsung aktif. Jasa joki tugas estimasi 1-5 hari tergantung kompleksitas.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Apakah produk dijamin original? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">100% original, script anti malware, desain tanpa template umum, dan garansi revisi.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Metode pembayaran apa saja yang diterima? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Transfer Bank, E-Wallet (OVO, Dana, GOPAY), dan payment gateway tersedia.</div>
+      </div>
+    </div>
+
+    <!-- Tentang Kami + Kontak + Form (2 kolom) -->
+    <h2 class="section-title" id="contact">📞 Kontak & Tentang Kami</h2>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <h3 style="font-size: 1.8rem; margin-bottom: 16px;">THOHIR Store Infinity</h3>
+        <p>Hadir sebagai solusi digital lengkap untuk semua kebutuhanmu. Panel Pterodactyl premium, bot WhatsApp full fitur, desain kreatif & produk digital. Dengan harga terjangkau, support 24/7, dan layanan berkualitas.</p>
+        <div class="contact-detail">
+          <i class="fas fa-map-marker-alt fa-lg" style="color:#6C63FF;"></i>
+          <span>Jl. Soekarno, Jakarta, Indonesia</span>
+        </div>
+        <div class="contact-detail">
+          <i class="fab fa-whatsapp fa-lg" style="color:#25D366;"></i>
+          <span><strong>WA:</strong> 0859-3668-2759</span>
+        </div>
+        <div class="contact-detail">
+          <i class="fab fa-telegram fa-lg" style="color:#26A5E4;"></i>
+          <span><strong>Telegram:</strong> @HirrVon</span>
+        </div>
+        <div class="contact-detail">
+          <i class="fas fa-envelope fa-lg" style="color:#EA4335;"></i>
+          <span><strong>Email:</strong> t47651889@gmail.com</span>
+        </div>
+        <div class="social-icons">
+          <a href="https://wa.me/6285936682759?text=Halo%20THOHIR%20Store,%20saya%20tertarik%20dengan%20layanan%20Anda" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="https://t.me/HirrVon" target="_blank"><i class="fab fa-telegram"></i> Telegram</a> href=https://t.me/HirrVon
+target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+          <a href="mailto:t47651889@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Kirim Pesan Langsung</h3>
+        <form id="contactForm">
+          <input type="text" id="fullname" placeholder="Nama Lengkap" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <textarea rows="4" id="message" placeholder="Tulis pesan Anda di sini..."></textarea>
+          <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
+        </form>
+        <p style="margin-top: 16px; font-size: 0.8rem;">* Kami akan membalas via WhatsApp/Email dalam 1x24 jam</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h3 style="color: white; margin-bottom: 12px;">THOHIR INFITNY</h3>
+      <p>Developer & Creator | Solusi Digital Terpercaya</p>
+    </div>
+    <div class="footer-links">
+      <div><a href="#home">Beranda</a></div>
+      <div><a href="#services">Layanan</a></div>
+      <div><a href="#testimonials">Testimoni</a></div>
+      <div><a href="#contact">Kontak</a></div>
+    </div>
+    <div>
+      <p><i class="fas fa-clock"></i> Jam Operasional: 09:00 - 21:00 WIB</p>
+    </div>
+  </div>
+  <div class="container copyright">
+    © 2025 THOHIR INFITNY - THOHIR Store Infinity. All rights reserved. ⭐ 4.9 dari ribuan pelanggan.
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  if(menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      if(navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+      } else {
+        navLinks.style.display = 'flex';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '70px';
+        navLinks.style.left = '0';
+        navLinks.style.width = '100%';
+        navLinks.style.backgroundColor = 'white';
+        navLinks.style.padding = '20px';
+        navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.05)';
+        navLinks.style.gap = '16px';
+      }
+    });
+  }
+  // Accordion FAQ
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const questionDiv = item.querySelector('.faq-question');
+    questionDiv.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      faqItems.forEach(i => i.classList.remove('active'));
+      if(!isActive) item.classList.add('active');
+    });
+  });
+  // Form submission alert (simulasi)
+  const contactForm = document.getElementById('contactForm');
+  if(contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('fullname').value;
+      if(name.trim() === "") {
+        alert("Harap isi nama lengkap.");
+        return;
+      }
+      alert(`Terima kasih ${name}, pesan Anda telah terkirim! Kami akan menghubungi via WhatsApp/Email dalam 1x24 jam.`);
+      contactForm.reset();
+    });
+  }
+  // Resize handler untuk responsive menu
+  window.addEventListener('resize', function() {
+    if(window.innerWidth > 780) {
+      navLinks.style.display = '';
+      navLinks.style.flexDirection = '';
+      navLinks.style.position = '';
+      navLinks.style.width = '';
+      navLinks.style.backgroundColor = '';
+      navLinks.style.padding = '';
+      navLinks.style.boxShadow = '';
+    } else {
+      if(navLinks.style.display !== 'flex') navLinks.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>
+```
